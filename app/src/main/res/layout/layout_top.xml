@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:id="@+id/clickLayout"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_110sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_12sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvDesc"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sdp"
+                tools:text="Test" />
+
+            <TextView
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/llRating"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_13sdp"
+                tools:text="Test" />
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/llRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="start"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:rating="3"
+                    android:fitsSystemWindows="true"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    android:layout_height="wrap_content"
+                    style="?attr/ratingBarStyleSmall"/>
+
+                <TextView
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_gravity="end"
+                    android:id="@+id/tvTime"
+                    tools:text="20-30 mins"
+                    android:layout_width="0dp"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_90sdp"
+        app:cardCornerRadius="@dimen/_12sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
